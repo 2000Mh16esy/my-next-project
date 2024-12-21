@@ -1,15 +1,15 @@
 import Sheet from "@/app/components/Sheet";
-import Hero from "../components/Hereo";
+import Hero from "../components/Hero";
 
 type Props = {
-    children: React.ReactNode;
+  children: React.ReactNode;
 };
 
-export default function RootLayout({children}: Props) {
-    return (
+export default function RootLayout({ children }: Props) {
+  return (
     <>
-        <Hero title="Members" sub="メンバー"/>
-        <Sheet>{children}</Sheet>;
+      <Hero title="Members" sub="メンバー" />
+      <Sheet>{children}</Sheet>;
     </>
-    );
+  );
 }
