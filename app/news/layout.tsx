@@ -1,4 +1,3 @@
-import "./globals.css";
 import Hero from "@/app/components/Hero";
 import Sheet from "@/app/components/Sheet";
 
