@@ -84,6 +84,11 @@ export const getCategoryDetail = async (
         endpoint: "categories",
         contentId, 
         queries,
+        customerRequestInit: {
+            next: {
+                revalidate: quaries?.draftKey === undefined ? 60 : 0,
+            },
+        },
     });
     return detailData;
 };
