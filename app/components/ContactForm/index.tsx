@@ -61,6 +61,9 @@ export default function Contactform() {
                     "message" name="message"/>
                 </div>
                 <div className={styles.actions}>
+                    {state.status === "error"&& (
+                        <p className={styles.error}>{state.message}</p>
+                    )}
                     <input type="submit" value="送信する" className={styles.button}/>
                 </div>
         </form>
