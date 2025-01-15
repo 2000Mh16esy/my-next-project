@@ -1,7 +1,25 @@
 import "./globals.css";
+import type {Metadata} from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+export const metadata: Metadata = {
+  metadataBase: new URL ("http://locahost:3000"),
+  title:{
+    template: "%s | シンプルなコーポレートサイト",
+    default: "シンプルなコーポレートサイト"
+  },
+  description:
+  "「Next.js+ヘッドレスCMSではじめる！かんたん.モダンWebサイト制作入門」で作成されるサイトです。",
+  openGraph: {
+    title: "シンプルなコーポレートサイト",
+    description: "「Next.js+ヘッドレスCMSではじめる！かんたん.モダンWebサイト制作入門」で作成されるサイトです。",
+    images: ["/ogp.png"],
+  },
+  alternates: {
+    canoncial: "http://localhost:3000",
+  },
+};
 
 export default function RootLayout({
   children,
