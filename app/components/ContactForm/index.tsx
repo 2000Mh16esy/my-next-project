@@ -1,8 +1,29 @@
-import styles from "./index.module.class name";
+"use client";
+
+import { createContactData } from "@/app/actions/contact";
+import {useFormState} from "react-dom";
+import styles from "./index.module.css";
+
+const initialState = {
+    status: "",
+    message: "",
+};
 
 export default function Contactform() {
+    const [state, formAction] = 
+    useFormState(createContactData, initialState);
+    console.log(state);
+    if (state.status === "success") {
+        return (
+            <p className={styles.success}>
+                お問い合わせいただき、ありがとおうございます。
+                <br/>
+                お返事まで今しばらくお待ちください。
+            </p>
+        );
+    }
     return (
-        <form className={styles.from}>
+        <form className={styles.from} action={formAction}>
             <div className={styles.horizontal}>
                 <div className={styles.item}>
                     <label className={styles.label} htmlFor="lastname">
