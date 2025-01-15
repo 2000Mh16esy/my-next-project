@@ -1,3 +1,4 @@
+import type {Metadata} from "next";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getNewsDetail } from "@/app/libs/microcms";
@@ -13,6 +14,7 @@ type Props = {
     dk?: string;
   };
 };
+;
 
 export async function generateMetadata({
   params,
