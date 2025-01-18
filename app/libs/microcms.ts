@@ -84,9 +84,9 @@ export const getCategoryDetail = async (
         endpoint: "categories",
         contentId, 
         queries,
-        customerRequestInit: {
+        customRequestInit: {
             next: {
-                revalidate: quaries?.draftKey === undefined ? 60 : 0,
+                revalidate: queries?.draftKey === undefined ? 60 : 0,
             },
         },
     });
@@ -100,7 +100,7 @@ export const getAllNewsList = async () => {
     return listData;
 };
 
-export const getAllCategoryList = async => {
+export const getAllCategoryList = async () => {
     const listData = await client.getAllContents<Category> ({
         endpoint: "categories",
     });
