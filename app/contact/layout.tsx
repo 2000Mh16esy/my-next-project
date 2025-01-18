@@ -5,7 +5,7 @@ export const metadata = {
     title: "お問い合わせ"
   };
 
-type Prop = {
+type Props = {
     children: React.ReactNode;
 };
 

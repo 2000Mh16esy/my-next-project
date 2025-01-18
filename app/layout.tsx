@@ -1,4 +1,5 @@
 import "./globals.css";
+import {GoogleAnalytics} from "@next/third-parties/google";
 import type {Metadata} from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/ogp.png"],
   },
   alternates: {
-    canoncial: "http://localhost:3000",
+    canonical: "http://localhost:3000",
   },
 };
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         {children}
         <Footer/>
       </body>
+      <GoogleAnalytics gaId="G-XXX"/>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 
-type Pros = {
+type Props = {
     title: string;
     sub: string;
 };
